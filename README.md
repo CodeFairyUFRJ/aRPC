@@ -9,9 +9,9 @@ Uma framework para processamento distribuído
 O propósito desse trabalho de conclusão de curso é delinear a arquitetura de um sistema de processamento destribuído voltado para computação de alto desempenho. Além de apresentar as diferenças, vantagens e desvantagens que nosso sistema proposto tem com atuais projetos correlatos atualmente implantados pela industria e comunidade científica.
 
 ## Integrantes
-+ Ericson Soares (@fogodev)
-+ Raphael Almeida (@Raphael-C-Almeida)
-+ Vítor Vasconcellos (@HeavenVolkoff)
++ Ericson Soares ([@fogodev](https://github.com/fogodev))
++ Raphael Almeida ([@Raphael-C-Almeida](https://github.com/Raphael-C-Almeida))
++ Vítor Vasconcellos ([@HeavenVolkoff](https://github.com/HeavenVolkoff))
 
 ## Licensa
 [![Logo cc-by-sa-4.0](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
