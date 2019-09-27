@@ -1,0 +1,30 @@
+on:
+  push:
+    paths:
+      - '*'
+      - '!.*'
+      - '!*.md'
+      - '!*.yml'
+    branches:    
+      - master
+name: Build PDF
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Build
+      uses: docker://miktex/miktex:latest
+      with:
+        entrypoint: sh
+        args: -c "echo \"\$pdflatex = 'pdflatex -interaction=nonstopmode';\" > ~/.latexmkrc && latexmk -f -pdf; pdflatex -jobname=draft main.tex"
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      with:
+        body: Versão preliminar
+        draft: true
+        files: draft.pdf
+      env:
+        GITHUB_REF: refs/tags/draft
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
