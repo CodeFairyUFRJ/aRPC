@@ -1,10 +1,31 @@
 \section{Google Cloud Function}
 
-TODO
+O Google Cloud Functions se qualifica como uma forma simples de executar código em nuvem, fazendo escalonamento automático com alta tolerância a falhas que dispensa provisionamento e configurações de servidor e oferece cobrança somente quando o o código esta em execução.
+
+\subsection{Propósito}
+
+De acordo com a documentação da Google, os principais propósitos do Cloud Functions são, entregar ao desenvolvedor uma plataforma leve para criar funções independentes que respondam a eventos da nuvem sem necessidade de gerenciar servidores e ambientes de execução.
+
+Os principais tipos de aplicação pensados para funcionar com essa estrutura são, \textit{Back-end} de aplicações sem servidor como sites e aplicativos, processamento de dados, arquivos, \textit{streams} e processos de ETL, além de aplicativos inteligentes, como assistentes virtuais, \textit{chatbots}, analise de video, imagens e analise de sentimento.
 
 \subsection{Implantação}
+Para a implantação de um novo código para automação, processamento ou outro proposito, deve-se pensar não a nível de sistema, mas de funções isoladas com comportamentos finalidade única e bem estabelecida. 
 
-TODO
+\bigskip
+Cada uma dessas funções ou comportamentos deve ser escrita na linguagem escolhida dentre uma curta lista de opções. 
+
+\bigskip
+De acordo com o passo-a-passo da Google, para implantar uma função no cloud functions deve-se seguir 5 passos:
+\begin{alineas}
+	\item Preparação
+	\item Criar uma cloud function
+	\item Escrever o código da função
+	\item Testar a função
+	\item Escrever o código da função
+	\item Observar registros
+\end{alineas}
+
+
 
 \subsection{Escalabilidade}
 
@@ -39,10 +60,6 @@ TODO
 TODO
 
 \subsection{Preço}
-
-TODO
-
-\subsection{Propósito}
 
 TODO
 
