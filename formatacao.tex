@@ -1,0 +1,278 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{color}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{listings}         % Para as linguagens de programação
+\usepackage{lastpage}		  % Usado pela Ficha catalográfica
+\usepackage{indentfirst}	  % Indenta o primeiro parágrafo de cada seção.
+\usepackage{hhline}
+\usepackage{hyperref}
+% Informações do PDF
+\hypersetup{ colorlinks=false, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=DEPARTAMENTO DE CIÊNCIA DA COMPUTAÇÃO - UFRJ, pdfauthor=, pdfsubject=, pdfkeywords=}
+
+\usepackage[pdftex]{graphicx}
+\graphicspath{ {./figuras/} }
+% ---
+% Pacotes glossaries
+% ---
+\usepackage[subentrycounter,seeautonumberlist,nonumberlist=true]{glossaries}
+% para usar o xindy ao invés do makeindex:
+%\usepackage[xindy={language=portuguese},subentrycounter,seeautonumberlist,nonumberlist=true]{glossaries}
+% ---
+% Citações de referências no formato alfabético e negrito
+\usepackage[alf, abnt-emphasize=bf]{abntex2cite}
+% Margens definidas em 25 mm para uso como documento em PDF
+% Para imprimir use as seguintes margens:
+% \usepackage[left=30mm, top=30mm, right=20 mm, bottom=20mm] {geometry}
+
+\usepackage[margin=25 mm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definições de Macros utilizadas no TCC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\instituicao{UNIVERSIDADE FEDERAL DO RIO DE JANEIRO
+\par
+INSTITUTO DE MATEMÁTICA
+\par
+CURSO DE BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO}
+\title{MODELO DE MONOGRAFIA DE TRABALHO DE CONCLUSÃO DE CURSO\\ Modelo em Latex}
+\author{Gabriel P. Silva}
+\autor{Ana Lisa M. Dias \\ Oscar A. Melo}
+\orientador{Prof. João José da Silva}
+\coorientador{Profa. Maria da Penha}
+\local{RIO DE JANEIRO}
+\data{2018}
+\preambulo{Trabalho de conclusão de curso de graduação apresentado ao Departamento de Ciência da Computação da Universidade Federal do Rio de Janeiro como parte dos requisitos para obtenção do grau de Bacharel em Ciência da Computação.}
+
+\usepackage{tocloft}
+
+\usepackage{pdfpages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Corrige a fonte dos capítulos, seções, resumos, etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\ABNTEXchapterfont}{\bfseries \rmfamily}
+\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXsectionfont}{\mdseries}
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXsubsectionfont}{\bfseries}
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Criação de quadros com numeração
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% configurações para atender às regras da ABNT
+\setfloatadjustment{quadro}{\centering}
+\counterwithout{quadro}{chapter}
+\renewcommand{\cftquadroname}{\quadroname\space}
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+% Configuração de posicionamento padrão:
+\setfloatlocations{quadro}{hbtp}
+
+% Para ajudar nas tabelas e quadros
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Redefine a macro para imprimir a capa
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\imprimircapa}{%
+\begin{capa}%
+\center
+\imprimirinstituicao
+\par
+\vspace*{1cm}
+\MakeUppercase{\imprimirautor}
+\vfill
+\begin{center}
+\imprimirtitulo
+\end{center}
+\vfill
+\imprimirlocal
+\par
+\imprimirdata
+\vspace*{1cm}
+\end{capa}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Redefine a macro para imprimir a folho de rosto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\imprimirfolhaderosto}{%
+\begin{capa}%
+\center
+\par
+\vspace*{1cm}
+\MakeUppercase{\imprimirautor}
+\vfill
+\begin{center}
+\imprimirtitulo
+\end{center}
+\vfill
+\hspace*{\fill}\parbox[b]{.5\textwidth}{%
+        \linespread{1}\selectfont
+\imprimirpreambulo
+}
+\vfill
+\flushright
+Orientador: \imprimirorientador\\
+
+Co-orientador: \imprimircoorientador\\
+\vfill
+\begin{center}
+\large\imprimirlocal
+\par
+\large\imprimirdata
+\vspace*{1cm}
+\end{center}
+\end{capa}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definição das Linguagens de Programação
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{purple}{rgb}{0.8,0,0.3}
+\definecolor{orange}{rgb}{1,0.4,0}
+\definecolor{lightlightgray}{rgb}{.95,.95,.95}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{lightgray2}{rgb}{.85,.85,.85}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+
+% Comando para inserir a listagem de código, tem 4 parâmetros
+% Linguagem, Caption, Label, Nome do Arquivo
+\newcommand{\includecode}[4][C]{\mbox{\lstinputlisting[caption=#2, label=#3, escapechar=, style=custom#1]{#4}}}
+
+
+%Define características em comum
+\lstset{framexleftmargin=5mm,  frame=shadowbox, rulesepcolor=\color{gray}}
+
+% Aqui você pode customizar a linguagem
+\lstdefinestyle{customC}{
+      language = C,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+% Aqui você pode customizar a linguagem
+\lstdefinestyle{customJava}{
+      language = Java,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+% Aqui você pode customizar a linguagem
+\lstdefinestyle{customC++}{
+      language = C++,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+\lstdefinestyle{customJavaScript}{
+      language = JavaScript,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+\lstdefinestyle{customJSON}{
+      language = JSON,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+\lstdefinestyle{customSapiens}{
+      language = Sapiens,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+% Javascript
+\lstdefinelanguage{JavaScript}{
+    aboveskip=15pt,
+    keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+    keywordstyle=\color{blue}\bfseries,
+    ndkeywords={class, export, boolean, throw, implements, import, this},
+    ndkeywordstyle=\color{darkgray}\bfseries,
+    identifierstyle=\color{black},
+    sensitive=false,
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    commentstyle=\color{purple}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    morestring=[b]',
+    morestring=[b]",
+    rulecolor=\color{lightgray2},
+    breaklines=true,
+    basicstyle=\footnotesize\ttfamily,
+    frame=single,
+    backgroundcolor=\color{lightlightgray}
+}
+% JSON
+\lstdefinelanguage{JSON}{
+    aboveskip=15pt,
+    string=[s]{"}{"},
+    stringstyle=\color{blue},
+    comment=[l]{:},
+    commentstyle=\color{black},
+    rulecolor=\color{lightgray2},
+    breaklines=true,
+    basicstyle=\footnotesize\ttfamily,
+    frame=single,
+    backgroundcolor=\color{lightlightgray}
+}
+
+% Linguagem de Montagem
+\lstdefinelanguage{Sapiens}{
+    aboveskip=15pt,
+    keywordstyle=\color{blue}\bfseries,
+    comment=[l]{;},
+    commentstyle=\color{purple},
+    rulecolor=\color{lightgray2},
+    breaklines=true,
+    basicstyle=\footnotesize\ttfamily,
+    frame=single,
+    backgroundcolor=\color{lightlightgray},
+    language=[x86masm]Assembler,
+    morekeywords={DB, DS, DW, JN, JSR, LDA, ORG, STA, STS, TRAP}
+}

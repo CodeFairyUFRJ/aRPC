@@ -1,0 +1,222 @@
+\documentclass [12pt, a4paper, english, brazil, oneside, chapter=TITLE, section=TITLE]{abntex2}
+% Para impressão use doubleside
+\input{formatacao.tex}
+% ---
+% GLOSSARIO
+% ---
+\makeglossaries
+% ---
+% entradas do glossário
+% ---
+\input{elementos-postextuais/glossario.tex}
+% ---
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% I N I C I O  D O  D O C U M E N T O
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pretextual
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% C A P A (OBRIGATÓRIO)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{page}{1}
+\imprimircapa
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% F O L H A  D E  R O S T O  (OBRIGATÓRIO)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\imprimirfolhaderosto
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% F I C H A   C A T A L O G R Á F I A  (OBRIGATÓRIO)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ficha catalográfica (obrigatório)
+% Para elaborar a ficha catalográfica siga as instruções em
+% http://fichacatalografica.sibi.ufrj.br/}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{fichacatalografica}
+
+% Opcionalmente você pode usar
+\includepdf[pages=-]{elementos-pretextuais/ficha_catalografica.pdf}
+\end{fichacatalografica}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% F O L H A   D E   A P R O V A Ç Ã O  (OBRIGATÓRIO)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Isto é um exemplo folha de aprovação.
+% Substitua todo o conteúdo desta página por uma
+% imagem da página assinada pela banca com o comando abaixo:
+% \includepdf{folhadeaprovacao_final.pdf}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{elementos-pretextuais/folhadeaprovacao.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% D E D I C A T O R I A  (OPCIONAL)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{elementos-pretextuais/dedicatoria.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A G R A D E C I M E N T O S  (OPCIONAL)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{elementos-pretextuais/agradecimentos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% E P I G R A F E (OPCIONAL E SEM TÍTULO)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{elementos-pretextuais/epigrafe.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% R E S U M O    E M    P O R T U G U Ê S  (OBRIGATÓRIO)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{elementos-pretextuais/resumo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A B S T R A C T  (MANDATORY)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{elementos-pretextuais/abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% L I S T A   D E   I L U S T R A Ç Õ E S  (OPCIONAL)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% L I S T A   D E   C Ó D I G O S (OPCIONAL)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark[0]{\lstlistlistingname}{lol}
+\begin{KeepFromToc}
+\lstlistoflistings
+\end{KeepFromToc}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% L I S T A   D E   T A B E L A S  (OPCIONAL)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% L I S T A   D E   Q U A D R O S (OPCIONAL)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark[0]{\listofquadrosname}{loq}
+\listofquadros*
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% L I S T A   D E  A B R E V I A T U R A S  E   S I G L A S
+% (OPCIONAL)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{elementos-pretextuais/abreviaturas.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% L I S T A   D E  S Í M B O L O S   (OPCIONAL)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{elementos-pretextuais/simbolos.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  S U M Á R I O  (OBRIGATÓRIO)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand\cftsectionfont{\mdseries \scshape}
+\renewcommand\cftsubsubsectionfont{\mdseries}
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  E L E M E N T O S   T E X T U A I S  (OBRIGATÓRIO)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textual
+% Coloca apenas o número da página como cabeçalho
+\pagestyle{simple}
+\aliaspagestyle{chapter}{simple}
+
+\input{elementos-textuais/capitulo-1.tex}
+
+\input{elementos-textuais/capitulo-2.tex}
+
+\input{elementos-textuais/capitulo-3.tex}
+
+\input{elementos-textuais/capitulo-4.tex}
+
+\input{elementos-textuais/capitulo-5.tex}
+
+\postextual
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% R E F E R Ê N C I A S  (OBRIGATÓRIO)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliography{referencias.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% G L O S S A R I O (opcional)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\addcontentsline{toc}{chapter}{GLOSSÁRIO} %\glossaryname
+\printglossary
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A P Ê N D I C E S  (Opcional)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Apêndice(s) (}}}\textrm{\textcolor{red}{Este item é
+% elaborado pelo próprio autor do trabalho e serve para
+% complementar a sua argumentação.
+% É um elemento {opcional).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\begin{apendicesenv}
+{\centering
+\ABNTEXchapterfont{\textrm{APÊNDICES}}
+\par}
+\bigskip
+\input{elementos-postextuais/apendice-1.tex}
+\vspace{\onelineskip}
+\bigskip
+\input{elementos-postextuais/apendice-2.tex}
+\end{apendicesenv}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A N E X O S   (Opcional)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Anexos (Este item é constituído por documentos complementares
+% ao texto do trabalho e que não são elaborados pelo autor
+% do mesmo, servem para fundamentação, comprovação e ilustração.
+% É um elemento opcional)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
+\begin{anexosenv}
+{\centering
+\ABNTEXchapterfont{ANEXOS}
+\par}
+\bigskip
+\input{elementos-postextuais/anexo-1.tex}
+\vspace{\onelineskip}
+\bigskip
+\input{elementos-postextuais/anexo-2.tex}
+\end{anexosenv}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% F I M   D O  D O C U M E N T O
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
