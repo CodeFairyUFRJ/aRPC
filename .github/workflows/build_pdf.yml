@@ -20,11 +20,10 @@ jobs:
         entrypoint: sh
         args: -c "echo \"\$pdflatex = 'pdflatex -interaction=nonstopmode';\" > ~/.latexmkrc && latexmk -f -pdf; pdflatex -jobname=draft main.tex"
     - name: Release
-      uses: softprops/action-gh-release@v1
+      uses: docker://python:3-buster
       with:
-        body: Versão preliminar
-        draft: true
-        files: draft.pdf
+        entrypoint: sh
+        args: -c "pip install github3.py && python .github/upload_release.py"
       env:
-        GITHUB_REF: refs/tags/draft
+        ASSET_PATH: draft.pdf
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
