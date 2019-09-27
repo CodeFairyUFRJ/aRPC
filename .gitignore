@@ -466,5 +466,6 @@ $RECYCLE.BIN/
 ### Project ###
 __latexindent_temp.tex
 *.bak[0-9]
+main.pdf
 
 # End of https://www.gitignore.io/api/tex,latex,linux,macos,windows
