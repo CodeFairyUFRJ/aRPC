@@ -1,4 +1,8 @@
 # Universe
+
+[![project_badge](https://img.shields.io/badge/CodeFairyUFRJ/Universe-black.svg?style=for-the-badge&logo=github "Project Badge")](https://github.com/CodeFairyUFRJ/Universe)
+[![license_badge](https://img.shields.io/github/license/CodeFairyUFRJ/Universe.svg?style=for-the-badge& "License Badge")](http://creativecommons.org/licenses/by-sa/4.0/)
+
 Uma framework para processamento distribuído
 
 ## Motivação
