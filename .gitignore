@@ -116,7 +116,7 @@ acs-*.bib
 *.glsdefs
 
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
-# *.ist
+*.ist
 
 # gnuplottex
 *-gnuplottex-*
@@ -314,128 +314,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-### TeX ###
-
-# these rules might exclude image files for figures etc.
-# *.ps
-# *.eps
-# *.pdf
-
-
-
-
-# latexrun
-
-# algorithms
-
-# achemso
-
-# amsthm
-
-# beamer
-
-# changes
-
-# comment
-
-# cprotect
-
-# elsarticle (documentclass of Elsevier journals)
-
-# endnotes
-
-# fixme
-
-# feynmf/feynmp
-
-
-# glossaries
-
-# uncomment this for glossaries-extra (will ignore makeindex's style files!)
-# *.ist
-
-# gnuplottex
-
-# gregoriotex
-
-# htlatex
-
-# hyperref
-
-# knitr
-# TODO Comment the next line if you want to keep your tikz graphics files
-
-# listings
-
-# luatexja-ruby
-
-# makeidx
-
-# minitoc
-
-# minted
-
-# morewrites
-
-# nomencl
-
-# pax
-
-# pdfpcnotes
-
-# sagetex
-
-# scrwfile
-
-# sympy
-
-# pdfcomment
-
-# pythontex
-
-# tcolorbox
-
-# thmtools
-
-# TikZ & PGF
-
-# todonotes
-
-# vhistory
-
-# easy-todo
-
-# xcolor
-
-# xmpincl
-
-# xindy
-
-# xypic precompiled matrices
-
-# endfloat
-
-# Latexian
-
-# WinEdt
-
-# Texpad
-
-# LyX
-
-# Kile
-
-# KBibTeX
-
-# auto folder when using emacs and auctex
-
-# expex forward references with \gathertags
-
-# standalone packages
-
-### TeX Patch ###
-# glossaries
 
 ### Windows ###
 # Windows thumbnail cache files
