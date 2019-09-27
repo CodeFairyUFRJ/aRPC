@@ -34,10 +34,10 @@
 % Definições de Macros utilizadas no TCC
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \instituicao{UNIVERSIDADE FEDERAL DO RIO DE JANEIRO
-\par
-INSTITUTO DE MATEMÁTICA
-\par
-CURSO DE BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO}
+	\par
+	INSTITUTO DE MATEMÁTICA
+	\par
+	CURSO DE BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO}
 \title{UNIVERSE \\ Uma \textit{framework} para processamento distribuído}
 \author{Ericson José da Silva Soares \\ Raphael de Carvalho Almeida \\ Vitor Augusto da Silva Vasconcellos}
 \autor{Ericson José da Silva Soares \\ Raphael de Carvalho Almeida \\ Vitor Augusto da Silva Vasconcellos}
@@ -94,54 +94,54 @@ CURSO DE BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO}
 % Redefine a macro para imprimir a capa
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\imprimircapa}{%
-\begin{capa}%
-\center
-\imprimirinstituicao
-\par
-\vspace*{1cm}
-\MakeUppercase{\imprimirautor}
-\vfill
-\begin{center}
-\imprimirtitulo
-\end{center}
-\vfill
-\imprimirlocal
-\par
-\imprimirdata
-\vspace*{1cm}
-\end{capa}
+	\begin{capa}%
+		\center
+		\imprimirinstituicao
+		\par
+		\vspace*{1cm}
+		\MakeUppercase{\imprimirautor}
+		\vfill
+		\begin{center}
+			\imprimirtitulo
+		\end{center}
+		\vfill
+		\imprimirlocal
+		\par
+		\imprimirdata
+		\vspace*{1cm}
+	\end{capa}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Redefine a macro para imprimir a folho de rosto
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\imprimirfolhaderosto}{%
-\begin{capa}%
-\center
-\par
-\vspace*{1cm}
-\MakeUppercase{\imprimirautor}
-\vfill
-\begin{center}
-\imprimirtitulo
-\end{center}
-\vfill
-\hspace*{\fill}\parbox[b]{.5\textwidth}{%
-        \linespread{1}\selectfont
-\imprimirpreambulo
-}
-\vfill
-\flushright
-Orientador: \imprimirorientador\\
+	\begin{capa}%
+		\center
+		\par
+		\vspace*{1cm}
+		\MakeUppercase{\imprimirautor}
+		\vfill
+		\begin{center}
+			\imprimirtitulo
+		\end{center}
+		\vfill
+		\hspace*{\fill}\parbox[b]{.5\textwidth}{%
+			\linespread{1}\selectfont
+			\imprimirpreambulo
+		}
+		\vfill
+		\flushright
+		Orientador: \imprimirorientador\\
 
-Co-orientador: \imprimircoorientador\\
-\vfill
-\begin{center}
-\large\imprimirlocal
-\par
-\large\imprimirdata
-\vspace*{1cm}
-\end{center}
-\end{capa}
+		Co-orientador: \imprimircoorientador\\
+		\vfill
+		\begin{center}
+			\large\imprimirlocal
+			\par
+			\large\imprimirdata
+			\vspace*{1cm}
+		\end{center}
+	\end{capa}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,113 +166,113 @@ Co-orientador: \imprimircoorientador\\
 
 % Aqui você pode customizar a linguagem
 \lstdefinestyle{customC}{
-      language = C,
-      breaklines=true,
-      basicstyle=\footnotesize\ttfamily,
-      keywordstyle=\bfseries\color{blue},
-      commentstyle=\itshape\color{purple},
-      identifierstyle=\color{black},
-      stringstyle=\color{orange},
-      showstringspaces=false}
+	language = C,
+	breaklines=true,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{blue},
+	commentstyle=\itshape\color{purple},
+	identifierstyle=\color{black},
+	stringstyle=\color{orange},
+	showstringspaces=false}
 
 % Aqui você pode customizar a linguagem
 \lstdefinestyle{customJava}{
-      language = Java,
-      breaklines=true,
-      basicstyle=\footnotesize\ttfamily,
-      keywordstyle=\bfseries\color{blue},
-      commentstyle=\itshape\color{purple},
-      identifierstyle=\color{black},
-      stringstyle=\color{orange},
-      showstringspaces=false}
+	language = Java,
+	breaklines=true,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{blue},
+	commentstyle=\itshape\color{purple},
+	identifierstyle=\color{black},
+	stringstyle=\color{orange},
+	showstringspaces=false}
 
 % Aqui você pode customizar a linguagem
 \lstdefinestyle{customC++}{
-      language = C++,
-      breaklines=true,
-      basicstyle=\footnotesize\ttfamily,
-      keywordstyle=\bfseries\color{blue},
-      commentstyle=\itshape\color{purple},
-      identifierstyle=\color{black},
-      stringstyle=\color{orange},
-      showstringspaces=false}
+	language = C++,
+	breaklines=true,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{blue},
+	commentstyle=\itshape\color{purple},
+	identifierstyle=\color{black},
+	stringstyle=\color{orange},
+	showstringspaces=false}
 
 \lstdefinestyle{customJavaScript}{
-      language = JavaScript,
-      breaklines=true,
-      basicstyle=\footnotesize\ttfamily,
-      keywordstyle=\bfseries\color{blue},
-      commentstyle=\itshape\color{purple},
-      identifierstyle=\color{black},
-      stringstyle=\color{orange},
-      showstringspaces=false}
+	language = JavaScript,
+	breaklines=true,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{blue},
+	commentstyle=\itshape\color{purple},
+	identifierstyle=\color{black},
+	stringstyle=\color{orange},
+	showstringspaces=false}
 
 \lstdefinestyle{customJSON}{
-      language = JSON,
-      breaklines=true,
-      basicstyle=\footnotesize\ttfamily,
-      keywordstyle=\bfseries\color{blue},
-      commentstyle=\itshape\color{purple},
-      identifierstyle=\color{black},
-      stringstyle=\color{orange},
-      showstringspaces=false}
+	language = JSON,
+	breaklines=true,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{blue},
+	commentstyle=\itshape\color{purple},
+	identifierstyle=\color{black},
+	stringstyle=\color{orange},
+	showstringspaces=false}
 
 \lstdefinestyle{customSapiens}{
-      language = Sapiens,
-      breaklines=true,
-      basicstyle=\footnotesize\ttfamily,
-      keywordstyle=\bfseries\color{blue},
-      commentstyle=\itshape\color{purple},
-      identifierstyle=\color{black},
-      stringstyle=\color{orange},
-      showstringspaces=false}
+	language = Sapiens,
+	breaklines=true,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{blue},
+	commentstyle=\itshape\color{purple},
+	identifierstyle=\color{black},
+	stringstyle=\color{orange},
+	showstringspaces=false}
 
 % Javascript
 \lstdefinelanguage{JavaScript}{
-    aboveskip=15pt,
-    keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
-    keywordstyle=\color{blue}\bfseries,
-    ndkeywords={class, export, boolean, throw, implements, import, this},
-    ndkeywordstyle=\color{darkgray}\bfseries,
-    identifierstyle=\color{black},
-    sensitive=false,
-    comment=[l]{//},
-    morecomment=[s]{/*}{*/},
-    commentstyle=\color{purple}\ttfamily,
-    stringstyle=\color{red}\ttfamily,
-    morestring=[b]',
-    morestring=[b]",
-    rulecolor=\color{lightgray2},
-    breaklines=true,
-    basicstyle=\footnotesize\ttfamily,
-    frame=single,
-    backgroundcolor=\color{lightlightgray}
+	aboveskip=15pt,
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={class, export, boolean, throw, implements, import, this},
+	ndkeywordstyle=\color{darkgray}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]",
+	rulecolor=\color{lightgray2},
+	breaklines=true,
+	basicstyle=\footnotesize\ttfamily,
+	frame=single,
+	backgroundcolor=\color{lightlightgray}
 }
 % JSON
 \lstdefinelanguage{JSON}{
-    aboveskip=15pt,
-    string=[s]{"}{"},
-    stringstyle=\color{blue},
-    comment=[l]{:},
-    commentstyle=\color{black},
-    rulecolor=\color{lightgray2},
-    breaklines=true,
-    basicstyle=\footnotesize\ttfamily,
-    frame=single,
-    backgroundcolor=\color{lightlightgray}
+	aboveskip=15pt,
+	string=[s]{"}{"},
+	stringstyle=\color{blue},
+	comment=[l]{:},
+	commentstyle=\color{black},
+	rulecolor=\color{lightgray2},
+	breaklines=true,
+	basicstyle=\footnotesize\ttfamily,
+	frame=single,
+	backgroundcolor=\color{lightlightgray}
 }
 
 % Linguagem de Montagem
 \lstdefinelanguage{Sapiens}{
-    aboveskip=15pt,
-    keywordstyle=\color{blue}\bfseries,
-    comment=[l]{;},
-    commentstyle=\color{purple},
-    rulecolor=\color{lightgray2},
-    breaklines=true,
-    basicstyle=\footnotesize\ttfamily,
-    frame=single,
-    backgroundcolor=\color{lightlightgray},
-    language=[x86masm]Assembler,
-    morekeywords={DB, DS, DW, JN, JSR, LDA, ORG, STA, STS, TRAP}
+	aboveskip=15pt,
+	keywordstyle=\color{blue}\bfseries,
+	comment=[l]{;},
+	commentstyle=\color{purple},
+	rulecolor=\color{lightgray2},
+	breaklines=true,
+	basicstyle=\footnotesize\ttfamily,
+	frame=single,
+	backgroundcolor=\color{lightlightgray},
+	language=[x86masm]Assembler,
+	morekeywords={DB, DS, DW, JN, JSR, LDA, ORG, STA, STS, TRAP}
 }
