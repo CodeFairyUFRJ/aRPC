@@ -31,25 +31,48 @@ Criar uma Cloud Function é uma etapa de configuração e ao mesmo tempo de impl
 \bigskip
 A proposta principal desse serviço não é ter uma flexibilidade incrível de configurações e nem garantir uma quantidade enorme de recursos para uma função, mas oferecer um meio simples e rápido de implementar uma função e disponibiliza-la para uso sem a necessidade de gerenciar servidores e ambientes de execução.
 
-\subsection{Escalabilidade}
+\subsubsection{Entrada e saída}
 
-TODO
+O Google Cloud Functions é bastante limitado em relação a interfaces de entrada e saída. Os possíveis meios entradas são pre-estabelecidos e normalmente são serviços da própria nuvem do Google. No contexto do Cloud Functions as entradas são tradas como \textit{triggers} (gatilhos) e elas estão listadas na Fig. \ref{fig:google-cloud-functions-triggers}. Além disso, no caso das saídas, elas estão restritas somente a execuções de procedimentos sem respostas por parte da função ou como única forma de saída através de respostas a requisições HTTP, ou seja, somente funcionam para gatilhos HTTP. 
 
-\subsection{Flexibilidade}
+\bigskip
+Além das restrições em relação a interface de entrada e de saída, existem ainda restrições em relação as definições de segurança. Se um desenvolvedor escolhe HTTP como gatilho de entrada por exemplo, ele só pode funcionar através de HTTPS com TLS configurado pela Google, ou seja inviabiliza uso de autenticação \textit{Client Certificate} (certificados do cliente) por exemplo.
 
-TODO
+\begin{figure}[ht]
+	\centering
+	\caption{Gatilhos permitidos}
+	\includegraphics[width=12.5cm]{figuras/google-cloud-functions/triggers.png}
+	\legend{Fonte: cloud.google.com/functions/}
+	\label{fig:google-cloud-functions-triggers}
+\end{figure}
+
+
+\bigskip
+Ou seja, apesar da versatilidade e facilidade de usar Google Cloud Functions, ela vem associada a muitas restrições de entrada e saída e também customizações de segurança.
 
 \subsubsection{Linguagens}
 
-TODO
+Para os procedimentos e funções rodando no Cloud functions existe uma lista de possíveis linguagens de programação disponíveis, dentre essas linguagens temos Node.js, Python e Go.
+Para o Node.js estão disponiveis as versões \textbf{Node.js 6} (deprecada), \textbf{Node.js 8}, \textbf{Node.js 10}, Para Python somente a versão \textbf{Python 3.7.1} e para Go somente \textbf{Go 1.11.65}.
 
-\subsubsection{Entrada e saída}
+\subsubsection{Escalabilidade}
+
+TODO CONTINUE FROM HERE: https://cloud.google.com/functions/docs/concepts/exec
+
+\subsubsection{Flexibilidade}
 
 TODO
 
 \subsection{Arquitetura}
 
 TODO
+\begin{figure}[ht]
+	\centering
+	\caption{Diagrama de funcionamento}
+	\includegraphics[width=12.5cm]{figuras/google-cloud-functions/workflow.png}
+	\legend{Fonte: console.cloud.google.com}
+	\label{fig:google-cloud-functions-workflow}
+\end{figure}
 
 \subsubsection{Protocolos de rede}
 
