@@ -5,13 +5,15 @@
 \usepackage{color}
 \usepackage{array}
 \usepackage{supertabular}
-\usepackage{listings}         % Para as linguagens de programação
+\usepackage{listings}	      % Para as linguagens de programação
 \usepackage{lastpage}		  % Usado pela Ficha catalográfica
 \usepackage{indentfirst}	  % Indenta o primeiro parágrafo de cada seção.
 \usepackage{hhline}
 \usepackage{hyperref}
 % Informações do PDF
-\hypersetup{ colorlinks=false, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=DEPARTAMENTO DE CIÊNCIA DA COMPUTAÇÃO - UFRJ, pdfauthor=, pdfsubject=, pdfkeywords=}
+\hypersetup{ colorlinks=false, linkcolor=blue, citecolor=blue, filecolor=blue,
+	urlcolor=blue, pdftitle=DEPARTAMENTO DE CIÊNCIA DA COMPUTAÇÃO - UFRJ,
+	pdfauthor=, pdfsubject=, pdfkeywords=}
 
 \usepackage[pdftex]{graphicx}
 \graphicspath{ {./figuras/} }
@@ -39,13 +41,20 @@
 	\par
 	CURSO DE BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO}
 \title{UNIVERSE \\ Uma \textit{framework} para processamento distribuído}
-\author{Ericson José da Silva Soares \\ Raphael de Carvalho Almeida \\ Vitor Augusto da Silva Vasconcellos}
-\autor{Ericson José da Silva Soares \\ Raphael de Carvalho Almeida \\ Vitor Augusto da Silva Vasconcellos}
+\author{Ericson José da Silva Soares \\ Raphael de Carvalho Almeida \\ Vitor
+	Augusto da Silva Vasconcellos}
+\autor{Ericson José da Silva Soares \\ Raphael de Carvalho Almeida \\ Vitor
+	Augusto da Silva Vasconcellos}
 \orientador{Prof. Gabriel Pereira Silva}
 \coorientador{Prof. Claudio Miceli Farias}
 \local{RIO DE JANEIRO}
 \data{2019}
-\preambulo{Trabalho de conclusão de curso de graduação apresentado ao Departamento de Ciência da Computação da Universidade Federal do Rio de Janeiro como parte dos requisitos para obtenção do grau de Bacharel em Ciência da Computação.}
+\preambulo{Trabalho de conclusão de curso de graduação apresentado ao
+	Departamento de Ciência da Computação da Universidade Federal do Rio de
+	Janeiro
+	como parte dos requisitos para obtenção do grau de Bacharel em Ciência
+	da
+	Computação.}
 
 \usepackage{tocloft}
 
@@ -125,6 +134,7 @@
 			\imprimirtitulo
 		\end{center}
 		\vfill
+
 		\hspace*{\fill}\parbox[b]{.5\textwidth}{%
 			\linespread{1}\selectfont
 			\imprimirpreambulo
@@ -158,8 +168,8 @@
 
 % Comando para inserir a listagem de código, tem 4 parâmetros
 % Linguagem, Caption, Label, Nome do Arquivo
-\newcommand{\includecode}[4][C]{\mbox{\lstinputlisting[caption=#2, label=#3, escapechar=, style=custom#1]{#4}}}
-
+\newcommand{\includecode}[4][C]{\mbox{\lstinputlisting[caption=#2, label=#3,
+			escapechar=, style=custom#1]{#4}}}
 
 %Define características em comum
 \lstset{framexleftmargin=5mm,  frame=shadowbox, rulesepcolor=\color{gray}}
@@ -230,7 +240,9 @@
 % Javascript
 \lstdefinelanguage{JavaScript}{
 	aboveskip=15pt,
-	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+	keywords={typeof, new, true, false, catch, function, return, null,
+			catch, switch, var, if, in, while, do, else, case,
+			break},
 	keywordstyle=\color{blue}\bfseries,
 	ndkeywords={class, export, boolean, throw, implements, import, this},
 	ndkeywordstyle=\color{darkgray}\bfseries,

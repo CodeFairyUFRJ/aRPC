@@ -1,17 +1,48 @@
 \section{AWS Lambda}
 
-O AWS Lambda é um serviço de computação em nuvem que segue o modelo de \textit{Serveless Computing}.
-Seu propósito é permitir que usuários façam implatação de serviços sem a necessidade de provisionamento ou gerenciamento da infraestrutura que os executarão.
+O AWS Lambda é um serviço de computação em nuvem que segue o modelo de
+\textit{Serveless Computing}.
+Seu propósito é permitir que usuários façam implatação de aplicações sem a
+necessidade de provisionamento ou gerenciamento da infraestrutura que as
+executarão.
 De acordo com afirmações feitas pela provedora:
-o AWS Lambda executa seu código em uma infraestrutura de computação de alta disponibilidade sem a necessidade da administração dos recursos computacionais, inclusive manutenção de servidor e sistema operacional, provisionamento de capacidade e escalabilidade automática, monitoramento do código e registro em log.
+o AWS Lambda executa seu código em uma infraestrutura de computação de alta
+disponibilidade sem a necessidade da administração dos recursos computacionais,
+inclusive manutenção de servidor e sistema operacional, provisionamento de
+capacidade e escalabilidade automática, monitoramento do código e registro em
+log.
 
 \subsection{Implantação}
 
-TODO
+A AWS auto-denomina de \textit{função do Lambda} o código enviado para ser
+executado em sua infraestrutura.
+De acordo com o provedor cada \textit{função do Lambda} inclui o código a ser
+executado associado a informações de configuração que contêm o nome da função e
+os requisitos de recursos necessários para sua execução.
+Além disso é necessário que as funções sejam \textit{stateless}, ou seja que
+não
+contenham nenhuma dependência para com a infraestrutura a serem executadas, de
+modo que possam ser escaladas de acordo com o volume de eventos recebidos.
+
+% TODO: The block bellow is copy paste, change it
+Depois de fazer o upload do seu código no AWS Lambda, você pode associar sua
+função a recursos específicos da AWS (por exemplo, um bucket do Amazon S3
+específico, uma tabela do Amazon DynamoDB, um stream do Amazon Kinesis ou uma
+notificação do Amazon SNS). Então, quando o recurso muda, o Lambda executa sua
+função e gerencia os recursos computacionais conforme necessário para
+acompanhar as solicitações de entrada.
 
 \subsection{Escalabilidade}
 
-TODO
+% TODO: The block bellow is copy paste, change it
+O AWS Lambda invoca seu código apenas quando necessário e escala
+automaticamente para comportar a taxa de solicitações de entrada sem exigir que
+você configure nada. Não há limite para o número de solicitações que o seu
+código pode atender. O AWS Lambda tipicamente começa a executar seu código em
+milissegundos após um evento. Como o Lambda escala automaticamente, a
+performance continua consistentemente alta conforme a frequência de eventos
+aumenta. Como o código é stateless, o Lambda pode iniciar quantas instâncias
+forem necessárias sem implantações demoradas e atrasos de configuração.
 
 \subsection{Flexibilidade}
 
@@ -19,7 +50,111 @@ TODO
 
 \subsubsection{Linguagens}
 
-TODO
+% TODO: The block bellow is copy paste, reformat into a table
+Os seguintes ambientes de execução estão disponiveis no AWS Lambda:
+
+Node.js Runtimes
+Name	Identifier	Node.js Version 	AWS SDK for JavaScript
+Operating System
+
+Node.js 10
+
+nodejs10.x
+
+10.16.3
+
+2.488.0
+
+Amazon Linux 2
+
+Node.js 8.10
+
+nodejs8.10
+
+8.10
+
+2.488.0
+
+Amazon Linux
+
+Python Runtimes
+Name	Identifier	AWS SDK for Python	Operating System
+
+Python 3.7
+
+python3.7
+
+boto3-1.9.221 botocore-1.12.221
+
+Amazon Linux
+
+Python 3.6
+
+python3.6
+
+boto3-1.9.221 botocore-1.12.221
+
+Amazon Linux
+
+Python 2.7
+
+python2.7
+
+N/A
+
+Amazon Linux
+
+Ruby Runtimes
+Name	Identifier	AWS SDK for Ruby	Operating System
+
+Ruby 2.5
+
+ruby2.5
+
+3.0.1
+
+Amazon Linux
+
+Java Runtimes
+Name	Identifier	JDK	Operating System
+
+Java 8
+
+java8
+
+java-1.8.0-openjdk
+
+Amazon Linux
+
+Go Runtimes
+Name	Identifier	Operating System
+
+Go 1.x
+
+go1.x
+
+Amazon Linux
+
+.NET Runtimes
+Name	Identifier	Languages	Operating System
+
+.NET Core 2.1
+
+dotnetcore2.1
+
+C\#
+
+PowerShell Core 6.0
+
+Amazon Linux
+
+.NET Core 1.0
+
+dotnetcore1.0
+
+C\#
+
+Amazon Linux
 
 \subsubsection{Entrada e saída}
 
@@ -43,7 +178,12 @@ TODO
 
 \subsection{Preço}
 
-TODO
+% TODO: The block bellow is copy paste, change it
+Com o AWS Lambda, você paga apenas pelas solicitações atendidas e o tempo de
+computação necessário para executar seu código. O faturamento é medido em
+incrementos de 100 milissegundos, tornando-o econômico e facilitando a
+escalabilidade automática de algumas solicitações por dia para milhares de
+solicitações por segundo.
 
 \subsection{Propósito}
 
