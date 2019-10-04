@@ -57,13 +57,28 @@ Para o Node.js estão disponiveis as versões \textbf{Node.js 6} (deprecada), \t
 
 \subsubsection{Escalabilidade}
 
-TODO CONTINUE FROM HERE: https://cloud.google.com/functions/docs/concepts/exec
+O Cloud functions possui mecanismos de auto escalabilidade onde mais instâncias são recrutadas para tratar um fluxo maior de requisições, isso possibilita que a função implantada tenha bastante espaço para escalabilidade. Entretanto, a Google desenhou o sistema de forma que cada instancia trata somente uma requisição por vez, sem espaço para requisições assincronas, ou concorrentes em um mesmo nó. De acordo com a Google, isso garante que a instância tenha todo o CPU e memória reservados para sua execução, sem a necessidade de compartilhamento. Entretanto, esse mecanismo pode gerar desperdicio de CPU e memória ociosos. O Google garante que conforme mais requisições chegarem ao sistema, mais instâncias serão recrutadas para atenderem a demanda. Entretanto, para cada instancia iniciada, existe um processo de \textit{could start} que pode fazer com que requisições que atingiram instâncias em periodo de start possam demorar significativamente mais que requisições que atingiram instâncias já rodando dependendo do tempo de inicialização da função em questão.
+
+\bigskip
+A escalabilidade do Cloud functions também possui algumas configurações disponíveis para o desenvolvedor, como por exemplo, o numero máximo de instâncias permitido. De acordo com o Google, essa funcionalidade serve para limitar por exemplo numero de instâncias acessando um banco de dados, ou algum outro recurso limitado, evitando assim acessos acessivos, 
+
+\bigskip
+Outro aspecto relevante para a escalabilidade são as circunstancias nas quais uma nova instância é recrutada, e existem essencialmente dois casos:
+\begin{alineas}
+	\item Quando uma nova função é implantada no Cloud functions:
+	\item Quando o numero de requisições em andamento simultaneamente é maior que o número de instâncias e menor que o número máximo de instâncias pré-configurado.
+\end{alineas}
+
+\bigskip
+De acordo com a documentação, uma mesma instância pode ser usada muitas outras vezes após sua inicialização e quando possível a função deve fazer \textit{cache} para economizar tempo de execução. Além disso, deve se tomar cuidado quanto a erros ocorrendo nas funções, uma vez que as duas razões para uma instância ser desativada são, erros irrecuperáveis e trafego baixo.
 
 \subsubsection{Flexibilidade}
 
-TODO
+Apesar do Cloud functions oferecer algumas configurações e facilidades, o sistema também cria algumas limitações. Nesse sentido, alguns aspectos como tempo de execução, sistema de arquivos, rede, entrada e saída de dados, devem ser observados com cautela. O tempo máximo de execução de uma função é configurável, entretanto, o limite máximo permitido são 9 minutos. Quanto ao sistema de arquivos, ele será composto pelo arquivo da função em questão e suas dependências, entretanto, todo o sistema de arquivos dará a função somente permissão de leitura, exceto no diretório /tmp. Entretanto o diretório /tmp deve ser usado com cautela, uma vez que o espaço consumido nesse diretório na realidade é alocado na memória principal, e pode consumir recursos necessários para a execução da função. Quanto a rede, a função não pode fazer acessos de rede local, mas possui acesso a internet. No contexto de internet e requisições, deve-se ficar atento, uma vez que qualquer conexão que dure mais que 2 minutos é automaticamente desfeita pela Google gerando \textit{socket hangup} para a outra parte envolvida. Quanto a entrada de dados, a lista da Fig. \ref{fig:google-cloud-functions-triggers} mostra as poucas alternativas fornecidas. Já com relação a saída, no caso de eventos, a saída pode acontecer de qualquer maneira permitida que necessite acesso a internet, entretanto para gatilhos em HTTP, somente uma resposta HTTP pode ser dada.
 
 \subsection{Arquitetura}
+
+https://cloud.google.com/functions/quotas
 
 TODO
 \begin{figure}[ht]
