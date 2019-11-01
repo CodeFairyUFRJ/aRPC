@@ -4,7 +4,10 @@ TODO
 
 \subsection{Implantação}
 
-TODO
+A implantação do Storm pode ser feita manualmente ou utilizando alguma plataforma que oferece o Storm como um serviço, tal como a plataforma Azure da Microsoft. A diferença entre esses dois modelos se dá pelo fato de que na implantação manual se faz necessária a implantação e manutenção dos serviços de controle do Storm, tais como os nós Nimbus e Zookeeper, que são responsáveis pelo funcionamento e processamento distribuído entre os nós trabalhadores da topologia Storm. Enquanto num modelo de Storm como serviço, a única responsabilidade será a implantação dos nós trabalhadores.
+
+Os nós trabalhadores necessários para a execução são definidos pela topologia do Storm. Essas topologias são descritas geralmente em código Java, também podendo ser descritas em outras linguagens, como Python. As topologias são enviadas para serem executadas no \textit{cluster} através do programa de interface de linha de comando que acompanha o Storm.
+
 
 \subsection{Escalabilidade}
 
@@ -36,11 +39,13 @@ TODO
 
 \subsection{Licença}
 
-TODO
+Assim como outros sistemas desenvolvidos pela fundação Apache, o Storm segue a licença Apache versão 2.0, portanto é um sistema livre e de código aberto.
 
 \subsection{Preço}
 
-TODO
+O Storm é um sistema desenvolvido em código aberto, com isso qualquer pessoa tem acesso ao código fonte e consegue implementar onde bem entender, seguindo a documentação. Desse modo o Storm em si não tem nenhum custo. Porém existe o custo de infraestrutura associado, que só pode ser calculado a partir da capacidade de processamento necessária para a tarefa em questão.
+
+Em relação as plataformas de nuvem que oferecem o Storm como serviço, as metodologias de precificação podem variar.
 
 \subsection{Propósito}
 
