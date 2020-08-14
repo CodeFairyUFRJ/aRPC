@@ -1,0 +1,125 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aqui você pode personalizar a linguagem C  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinestyle{customC}{
+      language = C,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aqui você pode personalizar a linguagem Java 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\lstdefinestyle{customJava}{
+      language = Java,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aqui você pode personalizar a linguagem C++
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+\lstdefinestyle{customC++}{
+      language = C++,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aqui você pode personalizar a linguagem Javascript
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        
+\lstdefinestyle{customJavaScript}{
+      language = JavaScript,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+      
+% Javascript
+\lstdefinelanguage{JavaScript}{
+    aboveskip=15pt,
+    keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+    keywordstyle=\color{blue}\bfseries,
+    ndkeywords={class, export, boolean, throw, implements, import, this},
+    ndkeywordstyle=\color{darkgray}\bfseries,
+    identifierstyle=\color{black},
+    sensitive=false,
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    commentstyle=\color{purple}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    morestring=[b]',
+    morestring=[b]",
+    rulecolor=\color{lightgray2},
+    breaklines=true,
+    basicstyle=\footnotesize\ttfamily,
+    frame=single,
+    backgroundcolor=\color{lightlightgray}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aqui você pode personalizar o formato JSON
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        
+\lstdefinestyle{customJSON}{
+      language = JSON,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+      
+% JSON
+\lstdefinelanguage{JSON}{
+    aboveskip=15pt,
+    string=[s]{"}{"},
+    stringstyle=\color{blue},
+    comment=[l]{:},
+    commentstyle=\color{black},
+    rulecolor=\color{lightgray2},
+    breaklines=true,
+    basicstyle=\footnotesize\ttfamily,
+    frame=single,
+    backgroundcolor=\color{lightlightgray}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aqui você pode personalizar a linguagem de montagem do SAPIENS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%       
+\lstdefinestyle{customSapiens}{
+      language = Sapiens,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+% Linguagem de Montagem    
+\lstdefinelanguage{Sapiens}{
+    aboveskip=15pt,
+    keywordstyle=\color{blue}\bfseries,
+    comment=[l]{;},
+    commentstyle=\color{purple},
+    rulecolor=\color{lightgray2},
+    breaklines=true,
+    basicstyle=\footnotesize\ttfamily,
+    frame=single,
+    backgroundcolor=\color{lightlightgray},
+    language=[x86masm]Assembler,
+    morekeywords={DB, DS, DW, JN, JSR, LDA, ORG, STA, STS, TRAP}
+}
+     

@@ -1,0 +1,11 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para retirar '<' e '>' da URL das referências. Não modifique
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ProvidesPackage{url6023}
+\makeatletter
+\@ifpackageloaded{url}{%
+\addtociteoptionlist{abnt-url-package=url}
+\def\UrlLeft{}
+\def\UrlRight{}
+\urlstyle{same}}
+\makeatother

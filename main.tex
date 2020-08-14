@@ -1,7 +1,9 @@
-\documentclass [12pt, a4paper, english, brazil, oneside, chapter=TITLE,
-section=TITLE]{abntex2}
+\documentclass [12pt, a4paper, english, brazil, oneside, chapter=TITLE, section=TITLE]{abntex2}
 % Para impressão use doubleside
-\input{formatacao.tex}
+% ---
+% Arquivo com  a formatação é lido aqui. Não deve ser modificado
+% ---
+\input{formatacao}
 % ---
 % GLOSSARIO
 % ---
@@ -37,11 +39,14 @@ section=TITLE]{abntex2}
 % Para elaborar a ficha catalográfica siga as instruções em
 % http://fichacatalografica.sibi.ufrj.br/}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\vspace*{1cm}
 \begin{fichacatalografica}
-
-	% Opcionalmente você pode usar
-	\includepdf[pages=-]{elementos-pretextuais/ficha_catalografica.pdf}
+\begin{figure}[b]
+\centering
+\includegraphics[width=14.217cm,height=9.929cm]{ModeloMonografiaDCCUFRJ-img001.png}
+\end{figure}
+% Opcionalmente você pode usar
+% \includepdf{fig_ficha_catalografica.pdf}
 \end{fichacatalografica}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -99,7 +104,7 @@ section=TITLE]{abntex2}
 
 \pdfbookmark[0]{\lstlistlistingname}{lol}
 \begin{KeepFromToc}
-	\lstlistoflistings
+\lstlistoflistings
 \end{KeepFromToc}
 \cleardoublepage
 
@@ -135,10 +140,6 @@ section=TITLE]{abntex2}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  S U M Á R I O  (OBRIGATÓRIO)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\renewcommand\cftsectionfont{\mdseries \scshape}
-\renewcommand\cftsubsubsectionfont{\mdseries}
-
 \pdfbookmark[0]{\contentsname}{toc}
 \tableofcontents*
 \cleardoublepage
@@ -151,9 +152,9 @@ section=TITLE]{abntex2}
 \pagestyle{simple}
 \aliaspagestyle{chapter}{simple}
 
-\input{elementos-textuais/introducao.tex}
+\input{elementos-textuais/capitulo-1.tex}
 
-\input{elementos-textuais/projetos_correlatos.tex}
+\input{elementos-textuais/capitulo-2.tex}
 
 \input{elementos-textuais/capitulo-3.tex}
 
@@ -166,7 +167,7 @@ section=TITLE]{abntex2}
 % R E F E R Ê N C I A S  (OBRIGATÓRIO)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\bibliography{referencias.bib}
+\bibliography{elementos-postextuais/referencias.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % G L O S S A R I O (opcional)
@@ -176,48 +177,51 @@ section=TITLE]{abntex2}
 \printglossary
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% A P Ê N D I C E S  (Opcional)
+% A P Ê N D I C E S  (Opcional) 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Apêndice(s) (}}}\textrm{\textcolor{red}{Este item é
-% elaborado pelo próprio autor do trabalho e serve para
-% complementar a sua argumentação.
-% É um elemento {opcional).
+%\textrm{\textcolor{red}{Apêndice(s) (Este item é elaborado 
+% pelo próprio autor do trabalho e serve para  complementar
+% a sua argumentação.  É um elemento \textbf{opcional)}.}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \clearpage
 \begin{apendicesenv}
-	{\centering
-		\ABNTEXchapterfont{\textrm{APÊNDICES}}
-		\par}
-	\bigskip
-	\input{elementos-postextuais/apendice-1.tex}
-	\vspace{\onelineskip}
-	\bigskip
-	\input{elementos-postextuais/apendice-2.tex}
+
+\begin{vplace}
+{\centering
+\ABNTEXchapterfont{\textrm{APÊNDICES}}
+\par}
+\end{vplace}
+\newpage
+\input{elementos-postextuais/apendice-1.tex}
+\newpage
+\input{elementos-postextuais/apendice-2.tex}
 \end{apendicesenv}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% A N E X O S   (Opcional)
+% A N E X O S   (Opcional) 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Anexos (Este item é constituído por documentos complementares
-% ao texto do trabalho e que não são elaborados pelo autor
-% do mesmo, servem para fundamentação, comprovação e ilustração.
-% É um elemento opcional)}
+% \textrm{\textcolor{red}{Anexos (Este item é constituído por 
+% documentos complementares ao texto do trabalho e que não são 
+% elaborados pelo autor do mesmo, servem para fundamentação, 
+% comprovação e ilustração. É um elemento \textbf{opcional}).}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \clearpage
 \begin{anexosenv}
-	{\centering
-		\ABNTEXchapterfont{ANEXOS}
-		\par}
-	\bigskip
-	\input{elementos-postextuais/anexo-1.tex}
-	\vspace{\onelineskip}
-	\bigskip
-	\input{elementos-postextuais/anexo-2.tex}
+
+\begin{vplace}
+{\centering
+\ABNTEXchapterfont{ANEXOS}
+\par}
+\end{vplace}
+\newpage
+\input{elementos-postextuais/anexo-1.tex}
+\newpage
+\input{elementos-postextuais/anexo-2.tex}
 \end{anexosenv}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % F I M   D O  D O C U M E N T O
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \end{document}
