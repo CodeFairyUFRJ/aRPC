@@ -1,0 +1,22 @@
+
+// Course e o campo de golf onde o jogo acontece
+type course struct {
+	ID    uint64
+	name  text
+	holes []hole
+	image binary
+	tags  []text
+}
+
+type hole struct {
+	// Lat e a latitude do buraco.
+	lat float64
+	// Lon e a longitude do buraco.
+	lon float64
+	// Par e o indice de dificulade.
+	par uint8
+	// Water indica a presenca de agua.
+	water bool
+	// Sand indica a presenca de areia.
+	sand bool
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/almeida-raphael/arpc_examples";
+
+message NumberList {
+  repeated int32 entries = 1;
+}
+
+message Result {
+  int32 value = 1;
+}
+
+service DoubleType {
+  rpc Average(NumberList) returns (Result) {}
+}

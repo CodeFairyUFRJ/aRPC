@@ -5,17 +5,18 @@
 % ---
 \input{formatacao}
 % ---
-% GLOSSARIO
+% GLOSSÁRIO
 % ---
-\makeglossaries
+% \makeglossaries
 % ---
-% entradas do glossário
+% Entradas do glossário
 % ---
-\input{elementos-postextuais/glossario.tex}
+% \input{elementos-postextuais/glossario.tex}
 % ---
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % I N I C I O  D O  D O C U M E N T O
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
 \begin{document}
 \pretextual
 
@@ -39,14 +40,14 @@
 % Para elaborar a ficha catalográfica siga as instruções em
 % http://fichacatalografica.sibi.ufrj.br/}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace*{1cm}
+% \vspace*{1cm}
 \begin{fichacatalografica}
 \begin{figure}[b]
 \centering
-\includegraphics[width=14.217cm,height=9.929cm]{ModeloMonografiaDCCUFRJ-img001.png}
-\end{figure}
+% \includegraphics[width=14.217cm,height=9.929cm]{ModeloMonografiaDCCUFRJ-img001.png}
 % Opcionalmente você pode usar
-% \includepdf{fig_ficha_catalografica.pdf}
+\includegraphics[width=\textwidth]{ficha.pdf}
+\end{figure}
 \end{fichacatalografica}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,13 +69,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % A G R A D E C I M E N T O S  (OPCIONAL)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \input{elementos-pretextuais/agradecimentos}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % E P I G R A F E (OPCIONAL E SEM TÍTULO)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \input{elementos-pretextuais/epigrafe.tex}
 
@@ -120,12 +121,12 @@
 % L I S T A   D E   Q U A D R O S (OPCIONAL)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pdfbookmark[0]{\listofquadrosname}{loq}
-\listofquadros*
-\cleardoublepage
+% \pdfbookmark[0]{\listofquadrosname}{loq}
+% \listofquadros*
+% \cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% L I S T A   D E  A B R E V I A T U R A S  E   S I G L A S
+% L I S T A   D E  A B R E V I A T U R A S  E   S I G L A S 
 % (OPCIONAL)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -135,7 +136,7 @@
 % L I S T A   D E  S Í M B O L O S   (OPCIONAL)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{elementos-pretextuais/simbolos.tex}
+% \input{elementos-pretextuais/simbolos.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  S U M Á R I O  (OBRIGATÓRIO)
@@ -172,9 +173,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % G L O S S A R I O (opcional)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
-\addcontentsline{toc}{chapter}{GLOSSÁRIO} %\glossaryname
-\printglossary
+% \clearpage
+% \addcontentsline{toc}{chapter}{GLOSSÁRIO} %\glossaryname
+% \printglossary
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % A P Ê N D I C E S  (Opcional) 
@@ -184,19 +185,19 @@
 % a sua argumentação.  É um elemento \textbf{opcional)}.}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\clearpage
-\begin{apendicesenv}
+% \clearpage
+% \begin{apendicesenv}
 
-\begin{vplace}
-{\centering
-\ABNTEXchapterfont{\textrm{APÊNDICES}}
-\par}
-\end{vplace}
-\newpage
-\input{elementos-postextuais/apendice-1.tex}
-\newpage
-\input{elementos-postextuais/apendice-2.tex}
-\end{apendicesenv}
+% \begin{vplace}
+% {\centering
+% \ABNTEXchapterfont{\textrm{APÊNDICES}}
+% \par}
+% \end{vplace}
+% \newpage
+% \input{elementos-postextuais/apendice-1.tex}
+% \newpage
+% \input{elementos-postextuais/apendice-2.tex}
+% \end{apendicesenv}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % A N E X O S   (Opcional) 
@@ -207,19 +208,19 @@
 % comprovação e ilustração. É um elemento \textbf{opcional}).}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\clearpage
-\begin{anexosenv}
+% \clearpage
+% \begin{anexosenv}
 
-\begin{vplace}
-{\centering
-\ABNTEXchapterfont{ANEXOS}
-\par}
-\end{vplace}
-\newpage
-\input{elementos-postextuais/anexo-1.tex}
-\newpage
-\input{elementos-postextuais/anexo-2.tex}
-\end{anexosenv}
+% \begin{vplace}
+% {\centering
+% \ABNTEXchapterfont{ANEXOS}
+% \par}
+% \end{vplace}
+% \newpage
+% \input{elementos-postextuais/anexo-1.tex}
+% \newpage
+% \input{elementos-postextuais/anexo-2.tex}
+% \end{anexosenv}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % F I M   D O  D O C U M E N T O

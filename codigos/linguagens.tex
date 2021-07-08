@@ -1,4 +1,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aqui você pode personalizar a linguagem Go
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinestyle{customGo}{
+      language = Go,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      ndkeywords={text, binary},
+      ndkeywordstyle=\color{blue}\bfseries,
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Aqui você pode personalizar a linguagem C  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lstdefinestyle{customC}{
@@ -122,4 +137,139 @@
     language=[x86masm]Assembler,
     morekeywords={DB, DS, DW, JN, JSR, LDA, ORG, STA, STS, TRAP}
 }
-     
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aqui você pode personalizar a linguagem Protobuffers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinestyle{customProtobuffers}{
+      language = Protobuffers,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+\lstdefinelanguage{Protobuffers}{
+    aboveskip=15pt,
+    keywords={syntax, option, message, repeated, int32, service, rpc, returns},
+    keywordstyle=\color{blue}\bfseries,
+    ndkeywords={class, export, boolean, throw, implements, import, this},
+    ndkeywordstyle=\color{darkgray}\bfseries,
+    identifierstyle=\color{black},
+    sensitive=false,
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    commentstyle=\color{purple}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    morestring=[b]',
+    morestring=[b]",
+    rulecolor=\color{black},
+    breaklines=true,
+    basicstyle=\ttfamily,
+    frame=shadowbox,
+    backgroundcolor=\color{white}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aqui você pode personalizar a linguagem Cap'n Proto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinestyle{customCapnProto}{
+      language = CapnProto,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+\lstdefinelanguage{CapnProto}{
+    aboveskip=15pt,
+    keywords={struct, enum, message, using, import, service, rpc, returns},
+    keywordstyle=\color{blue}\bfseries,
+    ndkeywords={@0, @1, @2, @3, @0x85d3acc3f0f0e0f8},
+    ndkeywordstyle=\color{Cerulean}\bfseries,
+    identifierstyle=\color{black},
+    sensitive=true,
+    comment=[l]{\#},
+    morecomment=[s]{/*}{*/},
+    commentstyle=\color{purple}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    morestring=[b]',
+    morestring=[b]",
+    rulecolor=\color{black},
+    breaklines=true,
+    basicstyle=\ttfamily,
+    frame=shadowbox,
+    backgroundcolor=\color{white}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aqui você pode personalizar a linguagem Colfer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinestyle{customColfer}{
+      language = Colfer,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+\lstdefinelanguage{Colfer}{
+    aboveskip=15pt,
+    keywords={struct, enum, message, using, import, service, rpc, returns},
+    keywordstyle=\color{blue}\bfseries,
+    ndkeywords={@0, @1, @2, @3, @0x85d3acc3f0f0e0f8},
+    ndkeywordstyle=\color{Cerulean}\bfseries,
+    identifierstyle=\color{black},
+    sensitive=true,
+    comment=[l]{\#},
+    morecomment=[s]{/*}{*/},
+    commentstyle=\color{purple}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    morestring=[b]',
+    morestring=[b]",
+    rulecolor=\color{black},
+    breaklines=true,
+    basicstyle=\ttfamily,
+    frame=shadowbox,
+    backgroundcolor=\color{white}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Aqui você pode personalizar a linguagem Thrift
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstdefinestyle{customThrift}{
+      language = Thrift,
+      breaklines=true,
+      basicstyle=\footnotesize\ttfamily,
+      keywordstyle=\bfseries\color{blue},
+      commentstyle=\itshape\color{purple},
+      identifierstyle=\color{black},
+      stringstyle=\color{orange},
+      showstringspaces=false}
+
+\lstdefinelanguage{Thrift}{
+    aboveskip=15pt,
+    keywords={struct, enum, namespace, optional, i32, void, service, oneway, throws, string},
+    keywordstyle=\color{blue}\bfseries,
+    ndkeywords={@0, @1, @2, @3, @0x85d3acc3f0f0e0f8},
+    ndkeywordstyle=\color{Cerulean}\bfseries,
+    identifierstyle=\color{black},
+    sensitive=true,
+    comment=[l]{\#},
+    morecomment=[s]{/*}{*/},
+    commentstyle=\color{purple}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    morestring=[b]',
+    morestring=[b]",
+    rulecolor=\color{black},
+    breaklines=true,
+    basicstyle=\ttfamily,
+    frame=shadowbox,
+    backgroundcolor=\color{white}
+}

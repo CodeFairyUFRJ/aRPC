@@ -7,6 +7,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb,amsfonts,textcomp}
 \usepackage{color}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{array}
 \usepackage{supertabular}
 \usepackage{listings}         % Para as linguagens de programação
@@ -16,6 +17,8 @@
 \usepackage{hyperref}
 \usepackage[pdftex]{graphicx}
 \graphicspath{ {./figuras/} }
+\usepackage[colorinlistoftodos, color=yellow]{todonotes}
+
 
 % retira as mensagens de aviso do pacote Glossaries
 \let\printglossary\relax
@@ -142,7 +145,7 @@
 \flushright
 Orientador: \imprimirorientador\\
 
-Co-orientador: \imprimircoorientador\\
+% Co-orientador: \imprimircoorientador\\
 \vfill
 \begin{center}
 \large\imprimirlocal
@@ -185,7 +188,13 @@ urlcolor=black
 % Comando para inserir a listagem de código, tem 4 parâmetros
 % Linguagem, Caption, Label, Nome do Arquivo
 %---
-\newcommand{\includecode}[4][C]{\mbox{\lstinputlisting[caption=#2, label=#3, escapechar=, style=custom#1]{#4}}}
+\newcommand{\includecode}[5][C]{%
+\mbox{%
+\lstinputlisting[caption=#2, label=#3, escapechar=, style=custom#1, tabsize=4]{#4}
+}
+\legend{#5}
+\vspace{10mm}
+}
 
 %---
 %Define características em comum e numeração sequencial 
