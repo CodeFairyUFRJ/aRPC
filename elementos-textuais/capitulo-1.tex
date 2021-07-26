@@ -1,21 +1,22 @@
 \chapter{INTRODUÇÃO}
+\label{chp:capitulo1}
 
 De uma maneira geral, sistemas computacionais são compostos por dados e por procedimentos que operam nesses dados. É comum que tais sistemas sejam executados inteiramente por um único computador. Entretanto, conforme as demandas de processamento e de novas funcionalidades vão crescendo, executar e escalonar esses sistemas em uma única máquina começa a se tornar uma tarefa inviável.\cite{ord_neuman_scale_1994}. 
 
 Para atender à demanda de crescimento são aplicados conceitos de sistemas distribuídos, onde partes distintas do sistema são executadas em computadores independentes, que se comunicam através de uma rede de interconexão. Um grande exemplo é a \textit{World Wide Web}, onde existem duas entidades principais: o cliente executado num navegador, que é responsável por receber a entrada de dados do usuário, requisitar as páginas para o servidor, exibir o seu conteúdo para o usuário, etc. E o servidor, sendo executado numa máquina remota, recebendo as requisições feitas pelo usuário, processando os dados, cuidando de operações em bancos de dados e emitindo uma resposta para o cliente.
 
-Existem diferentes metodologias para a implementação de sistemas distribuídos, tais como a troca de mensagens, \textit{publisher-subscriber} e a chamada de procedimento remoto (RPC - \textit{Remote Procedure Call}), que é a metologia abordada neste trabalho.
+Existem diferentes metodologias para a implementação de sistemas distribuídos, tais como a troca de mensagens, produtor-consumidor e a chamada de procedimento remoto (RPC - \textit{Remote Procedure Call}), que é a metologia abordada neste trabalho.
 
 A construção de sistemas distribuídos utilizando o paradigma de RPC é um tema estudado há décadas \cite{nelson_remote_1981}. Com o advento recente da computação em nuvem, o RPC retomou sua notoriedade. Hoje diversas empresas realizam a comunicação entre seus sistemas utilizando \textit{frameworks} de RPC, tais como o gRPC, Thrift, Avro, entre outros.
 
-A proposta deste trabalho é o desenvolvimento de um \textit{framework} RPC com foco na computação de alto desempenho, o aRPC, e avaliar o seu desempenho comparando com alternativas já consolidadas no mercado. Este trabalho foi dividido nos seguintes capítulos: referencial teórico e projetos correlatos; descrição da proposta; método experimental e análise de resultados; e conclusões e futuros trabalhos. 
+A proposta deste trabalho é o desenvolvimento de um \textit{framework} RPC com foco em computação de alto desempenho, o antena RPC (aRPC), e avaliar o seu desempenho comparando com alternativas já consolidadas no mercado. Este trabalho foi dividido nos seguintes capítulos: referencial teórico e projetos correlatos; descrição da proposta; método experimental e análise de resultados; e conclusões e trabalhos futuros. 
 
-Para o desenvolvimento de um novo \textit{framework} de RPC, primeiro foi necessário o estudo do funcionamento de alguns dos \textit{frameworks} de RPC modernos, bem como a revisão da literatura existente sobre o tema. Esses tópicos são apresentados no capítulo sobre referencial teórico e projetos correlatos.
+Para o desenvolvimento de um novo \textit{framework} de RPC, primeiro foi necessário o estudo do funcionamento de alguns dos \textit{frameworks} de RPC modernos, bem como a revisão da literatura existente sobre o tema. Esses tópicos são apresentados no capítulo \ref{chp:capitulo2} que detalha o referencial teórico e projetos correlatos.
 
-No capítulo que descreve a proposta são apresentados detalhes sobre a arquitetura adotada, além da análise de alternativas levantadas em cada uma das camadas de implementação do \textit{framework} e seus componentes. São apresentados também detalhes de implementação e eventuais dificuldades e soluções encontradas durante o desenvolvimento do projeto.
+No capítulo \ref{chp:capitulo3}, que descreve a proposta são apresentados detalhes sobre a arquitetura adotada, além da análise de alternativas levantadas em cada uma das camadas de implementação do \textit{framework} e seus componentes. São apresentados também detalhes de implementação e eventuais dificuldades e soluções encontradas durante o desenvolvimento do projeto.
 
-No capítulo sobre o método experimental e análise de resultados é feita uma comparação entre os resultados observados em algumas aplicações construídas, tanto com o protocolo aRPC e com outros \textit{frameworks} alternativos, detalhando vantagens e desvantagens descobertas em cada caso.
+No capítulo \ref{chp:capitulo4} é evidenciado o método experimental e análise de resultados é feita uma comparação entre os resultados observados em algumas aplicações construídas, tanto com o protocolo aRPC e com outros \textit{frameworks} alternativos, detalhando vantagens e desvantagens descobertas em cada caso.
 
-Por último, são apresentadas as conclusões do trabalho, abordando os insumos coletados nos capítulo anteriores, destacando os prós e contras do aRPC, bem como  a indicação de possíveis trabalhos futuros e acréscimos para o \textit{framework}.
+Por último, no capítulo \ref{chp:capitulo5}, são apresentadas as conclusões do trabalho, abordando os insumos coletados nos capítulo anteriores, destacando os prós e contras do aRPC, bem como a indicação de possíveis trabalhos futuros e acréscimos para o \textit{framework}.
 
 \bigskip

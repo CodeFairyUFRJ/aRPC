@@ -1,16 +1,11 @@
 \begin{resumo}[Abstract]
 \begin{otherlanguage*}{english}
 \begin{SingleSpace}
-The growing adoption of microservices architecture and the need for communication between distinct languages has stimulated the development of new solutions for remote procedure call (RPC). The diversity of needs and purposes has resulted in a variety of RPC implementations: some focusing on software ergonomics; others in the range of languages and functionalities; and, finally, a portion aimed at efficiency in high performance computing (HPC). In this sense, this work presents an RPC framework, named aRPC, with emphasis on both performance and software ergonomics, while inspired by the gRPC framework, it makes use of new serializers and the QUIC transport protocol for communication.
-In the evaluations performed, aRPC outperformed gRPC in cases with large amounts of elements in the data structures and when the data is more heterogeneous and less synthetic. The proposed protocol is able to offer performance up to 7\% better than gRPC, as long as the described assumptions are respected. In situations with frequent packet loss or in low quality networks, aRPC has a much better performance than gRPC, being up to three times better in some tests. The performance of aRPC opens up a field of application in high performance computing systems and the presented resiliency makes it an interesting option in IoT environments. However, the gRPC protocol has better performance for some specific data structures and for reduced data volumes.
+The growing adoption of microservices architecture and the need for communication between distinct languages has stimulated the development of new solutions for remote procedure call (RPC). The diversity of needs and purposes has resulted in a variety of RPC implementations: some focusing on software ergonomics; others on the range of languages and functionalities; and, finally, a portion aiming at efficiency in high performance computing (HPC). In this sense, this work presents an RPC framework, named antenna RPC (aRPC), with emphasis on both performance and software ergonomics, inspired by the gRPC framework, and that makes use of new serializers and the QUIC transport protocol for communication. 
+In the evaluations performed, aRPC outperformed gRPC in cases with large amounts of elements in the data structures and when the data is more heterogeneous and less synthetic. The proposed framework can be up to 7\% faster than gRPC, provided the assumptions described are respected. In situations with frequent packet loss or in low quality networks, aRPC performs much better than gRPC, being up to three times better in the throughput test. The results of aRPC open a field of application in high-performance computing systems and its resilience makes it an interesting option in IoT environments. Overall, aRPC is competitive when compared to gRPC in the context of HPC. However, the gRPC protocol performs better for simpler and less heterogeneous data structures and for small data volumes.
 \end{SingleSpace}
 
 \vspace{\onelineskip}
-\textbf{Keywords}: arpc; antenna remote procedure call; rpc; remote procedure call; quic; hpc; high performace computing; colfer; serialization; distributed systems; thrift;
+\textbf{Keywords}: arpc; antenna remote procedure call; rpc; remote procedure call; quic; hpc; high performace computing; colfer; serialization; distributed systems; thrift.
 \end{otherlanguage*}
 \end{resumo}
-
-
-
-
-

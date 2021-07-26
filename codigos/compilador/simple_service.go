@@ -38,6 +38,6 @@ func main(){
     
     hiResponse, err := greetingsService.SayHi(&requestData)
 
-    // O tratamento de erros e resposta devem continuar abaixo
+    // O tratamento de erros e resposta deve continuar abaixo
     
 }
